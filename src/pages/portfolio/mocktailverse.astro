@@ -1,0 +1,295 @@
+---
+import ZeroShotLayout from '../../components/ZeroShotLayout.astro';
+---
+
+<ZeroShotLayout 
+  title="Mocktailverse - AWS Serverless ETL Pipeline"
+  description="Production-ready AWS-native ETL pipeline with S3, Lambda, Glue, DynamoDB, Airflow, and dbt for recruiter showcase."
+>
+  <!-- Project Hero -->
+  <section style="padding: 3rem 2rem; background: linear-gradient(135deg, #fef3c7, #fbbf24);">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <div style="font-size: 5rem; margin-bottom: 1rem;">🍹</div>
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Mocktailverse AWS ETL Pipeline</h1>
+      <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem;">
+        Professional AWS serverless ETL pipeline showcasing Airflow, dbt, Glue, Lambda, and DynamoDB
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://mocktailverse.streamlit.app" target="_blank" class="zs-button zs-button-primary">View Live Dashboard</a>
+        <a href="https://github.com/anix-lynch/mocktailverse" target="_blank" class="zs-button zs-button-secondary">View GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo GIF -->
+  <section style="padding: 4rem 2rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <img src="https://raw.githubusercontent.com/anix-lynch/mocktailverse/main/demo.gif" alt="Mocktailverse Demo" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);" />
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section style="padding: 4rem 2rem; background: #f3f4f6;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Project Overview</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: #f59e0b;">The Challenge</h3>
+          <p style="line-height: 1.6; color: #4b5563;">
+            Transform a beginner AWS test suite into a professional, recruiter-ready ETL pipeline that demonstrates advanced data engineering skills while staying 100% within AWS Free Tier.
+          </p>
+        </div>
+        
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: #f59e0b;">The Solution</h3>
+          <p style="line-height: 1.6; color: #4b5563;">
+            Built a complete AWS-native serverless ETL pipeline using S3, Lambda, Glue, DynamoDB, orchestrated by Airflow, with dbt transformations, deployed via Docker and CloudFormation.
+          </p>
+        </div>
+        
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: #f59e0b;">The Results</h3>
+          <p style="line-height: 1.6; color: #4b5563;">
+            Achieved $0/month AWS costs (free tier), deployed to Docker Hub + Streamlit Cloud, GitHub-ready codebase, and live monitoring dashboard with real-time metrics.
+          </p>
+        </div>
+      </div>
+      
+      <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Key Features</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div style="background: #fef3c7; padding: 1rem; border-radius: 8px;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">☁️</div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">AWS Free Tier</h4>
+            <p style="font-size: 0.9rem; color: #6b7280;">$0/month operating cost with S3, Lambda, DynamoDB, Glue</p>
+          </div>
+          
+          <div style="background: #fef3c7; padding: 1rem; border-radius: 8px;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚙️</div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">Airflow Orchestration</h4>
+            <p style="font-size: 0.9rem; color: #6b7280;">Full DAG with task dependencies, retry logic, monitoring</p>
+          </div>
+          
+          <div style="background: #fef3c7; padding: 1rem; border-radius: 8px;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔧</div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">dbt Transformations</h4>
+            <p style="font-size: 0.9rem; color: #6b7280;">Staging & mart models with Athena connector</p>
+          </div>
+          
+          <div style="background: #fef3c7; padding: 1rem; border-radius: 8px;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🐳</div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">Docker + CloudFormation</h4>
+            <p style="font-size: 0.9rem; color: #6b7280;">IaC deployment, containerized pipeline on Docker Hub</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture -->
+  <section id="architecture" style="padding: 4rem 2rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Technical Architecture</h2>
+      <p style="margin-bottom: 2rem; color: #6b7280;">AWS-native serverless ETL pipeline with enterprise orchestration</p>
+      
+      <!-- Architecture Flow -->
+      <div style="background: #fef3c7; padding: 2rem; border-radius: 12px; text-align: center; margin-bottom: 2rem;">
+        <div style="font-family: monospace; font-size: 0.95rem; line-height: 2; color: #78350f;">
+          <div>S3 (Raw Data) → AWS Lambda (Transform) → DynamoDB (Load)</div>
+          <div>↓</div>
+          <div>AWS Glue (PySpark ETL) → dbt-core (Modeling)</div>
+          <div>↓</div>
+          <div>Apache Airflow (Orchestration) → Streamlit (Dashboard)</div>
+        </div>
+      </div>
+      
+      <!-- Tech Stack -->
+      <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Tech Stack</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; text-align: center;">
+          <div style="font-weight: bold; margin-bottom: 0.5rem;">Extract</div>
+          <ul style="list-style: none; font-size: 0.9rem; color: #6b7280;">
+            <li>Amazon S3</li>
+            <li>TheCocktailDB API</li>
+            <li>JSON/NDJSON</li>
+          </ul>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; text-align: center;">
+          <div style="font-weight: bold; margin-bottom: 0.5rem;">Transform</div>
+          <ul style="list-style: none; font-size: 0.9rem; color: #6b7280;">
+            <li>AWS Lambda</li>
+            <li>AWS Glue (PySpark)</li>
+            <li>dbt-core</li>
+          </ul>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; text-align: center;">
+          <div style="font-weight: bold; margin-bottom: 0.5rem;">Load</div>
+          <ul style="list-style: none; font-size: 0.9rem; color: #6b7280;">
+            <li>DynamoDB</li>
+            <li>Amazon Athena</li>
+            <li>Parquet on S3</li>
+          </ul>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; text-align: center;">
+          <div style="font-weight: bold; margin-bottom: 0.5rem;">Ops</div>
+          <ul style="list-style: none; font-size: 0.9rem; color: #6b7280;">
+            <li>Apache Airflow</li>
+            <li>Docker + Docker Hub</li>
+            <li>CloudFormation</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #f59e0b;">Deliverables</h3>
+        <p style="margin-bottom: 1rem;">
+          Production-ready ETL components:
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div style="background: white; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">📝</span>
+            <span>airflow_dag.py</span>
+          </div>
+          
+          <div style="background: white; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">⚡</span>
+            <span>lambda/transform.py</span>
+          </div>
+          
+          <div style="background: white; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">🔥</span>
+            <span>glue_job.py</span>
+          </div>
+          
+          <div style="background: white; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">🗄️</span>
+            <span>dynamodb_schema.json</span>
+          </div>
+          
+          <div style="background: white; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">🔧</span>
+            <span>dbt_project/</span>
+          </div>
+          
+          <div style="background: white; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">☁️</span>
+            <span>CloudFormation IaC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Demonstrated -->
+  <section style="padding: 4rem 2rem; background: #f3f4f6;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Skills Demonstrated (ATS Keywords)</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div style="background: white; border-radius: 12px; overflow: hidden; border: 2px solid #fbbf24;">
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #f59e0b;">☁️ AWS Services</h3>
+            <ul style="list-style: none; font-size: 0.95rem; line-height: 1.8; color: #4b5563;">
+              <li>✓ Amazon S3</li>
+              <li>✓ AWS Lambda</li>
+              <li>✓ AWS Glue</li>
+              <li>✓ Amazon DynamoDB</li>
+              <li>✓ Amazon Athena</li>
+              <li>✓ CloudFormation</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: white; border-radius: 12px; overflow: hidden; border: 2px solid #fbbf24;">
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #f59e0b;">🔧 Data Engineering</h3>
+            <ul style="list-style: none; font-size: 0.95rem; line-height: 1.8; color: #4b5563;">
+              <li>✓ ETL/ELT Pipelines</li>
+              <li>✓ Apache Airflow</li>
+              <li>✓ dbt-core</li>
+              <li>✓ PySpark</li>
+              <li>✓ SQL & NoSQL</li>
+              <li>✓ Data Modeling</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: white; border-radius: 12px; overflow: hidden; border: 2px solid #fbbf24;">
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #f59e0b;">🐳 DevOps & IaC</h3>
+            <ul style="list-style: none; font-size: 0.95rem; line-height: 1.8; color: #4b5563;">
+              <li>✓ Docker & Docker Compose</li>
+              <li>✓ Infrastructure as Code</li>
+              <li>✓ CI/CD (GitHub)</li>
+              <li>✓ Serverless Architecture</li>
+              <li>✓ Cost Optimization</li>
+              <li>✓ Monitoring & Logging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Performance Metrics -->
+  <section style="padding: 4rem 2rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; text-align: center;">Project Metrics</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+        <div style="background: #fef3c7; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+          <div style="font-size: 2.5rem; font-weight: 700; color: #f59e0b; margin-bottom: 0.5rem;">$0</div>
+          <div style="font-size: 0.9rem; color: #6b7280;">Monthly AWS Cost (Free Tier)</div>
+        </div>
+        
+        <div style="background: #fef3c7; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+          <div style="font-size: 2.5rem; font-weight: 700; color: #f59e0b; margin-bottom: 0.5rem;">7</div>
+          <div style="font-size: 0.9rem; color: #6b7280;">Airflow DAG Tasks</div>
+        </div>
+        
+        <div style="background: #fef3c7; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+          <div style="font-size: 2.5rem; font-weight: 700; color: #f59e0b; margin-bottom: 0.5rem;">3</div>
+          <div style="font-size: 0.9rem; color: #6b7280;">Deployment Platforms</div>
+        </div>
+        
+        <div style="background: #fef3c7; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+          <div style="font-size: 2.5rem; font-weight: 700; color: #f59e0b; margin-bottom: 0.5rem;">100%</div>
+          <div style="font-size: 0.9rem; color: #6b7280;">Serverless Architecture</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 4rem 2rem; background: linear-gradient(135deg, #78350f, #f59e0b); color: white; text-align: center;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;">Ready to see the code?</h2>
+      
+      <p style="margin-bottom: 2rem; opacity: 0.9;">
+        Explore the full AWS ETL pipeline on GitHub, check out the live Streamlit dashboard, or pull the Docker image from Docker Hub.
+      </p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/anix-lynch/mocktailverse" target="_blank" class="zs-button" style="background: white; color: #f59e0b; font-weight: 600; padding: 0.75rem 1.5rem;">
+          View on GitHub
+        </a>
+        
+        <a href="https://mocktailverse.streamlit.app" target="_blank" class="zs-button" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 0.75rem 1.5rem;">
+          Live Dashboard
+        </a>
+        
+        <a href="https://hub.docker.com/r/anixlynch/mocktailverse-etl" target="_blank" class="zs-button" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 0.75rem 1.5rem;">
+          Docker Hub
+        </a>
+      </div>
+    </div>
+  </section>
+</ZeroShotLayout>
+
